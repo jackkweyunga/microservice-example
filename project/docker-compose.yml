@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+
+  api-gateway:
+    image: devopsfaith/krakend:watch
+    ports:
+      - 8090:8080
+    volumes:
+      - ./config/krakend:/etc/krakend
+    command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]
+    depends_on:
+      - ms-service1
+      - ms-frontend
+      - keycloak
+
+  ms-service1:
+    image: ghcr.io/jackkweyunga/drf_oidc_example:main
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    expose:   
+      - 8000
+    container_name: ms-service1
+    hostname: ms-service1
+    env_file:
+      - ./config/service1/.env
+
+  ms-frontend:
+    image: ghcr.io/jackkweyunga/nextjs-keycloack-example:test
+    container_name: ms-frontend
+    hostname: ms-frontend
+    ports:
+      - 4000:3000
+    env_file:
+      - ./config/frontend/.env
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.1
+    command: ["start-dev"]
+    ports:
+      - 8080:8080
+    env_file:
+      - ./config/keycloak/.env
+
