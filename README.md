@@ -41,6 +41,12 @@ docker compose up -d
 
 ```
 
+## SETUP Networking
+
+Got to your system hosts files and add an entry to map `keycloak` as a local domain name that resolves to `127.0.0.1`. Below is an example in windows.
+
+![Alt text](/images//hosts.png)
+
 ## Setup Keycloak
 
 - [x] Got to the keycloack instance at => [http://localhost:8080](http://localhost:8080) . 

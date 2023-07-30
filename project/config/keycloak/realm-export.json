@@ -1,6 +1,8 @@
 {
     "id": "dc68d848-ef12-4e5a-a8b1-24d34435d4a7",
     "realm": "the-realm",
+    "displayName": "",
+    "displayNameHtml": "",
     "notBefore": 0,
     "defaultSignatureAlgorithm": "RS256",
     "revokeRefreshToken": false,
@@ -424,9 +426,9 @@
     "otpPolicyPeriod": 30,
     "otpPolicyCodeReusable": false,
     "otpSupportedApplications": [
-      "totpAppMicrosoftAuthenticatorName",
+      "totpAppGoogleName",
       "totpAppFreeOTPName",
-      "totpAppGoogleName"
+      "totpAppMicrosoftAuthenticatorName"
     ],
     "webAuthnPolicyRpEntityName": "keycloak",
     "webAuthnPolicySignatureAlgorithms": [
@@ -2191,13 +2193,19 @@
     "dockerAuthenticationFlow": "docker auth",
     "attributes": {
       "cibaBackchannelTokenDeliveryMode": "poll",
-      "cibaExpiresIn": "120",
       "cibaAuthRequestedUserHint": "login_hint",
-      "oauth2DeviceCodeLifespan": "600",
       "oauth2DevicePollingInterval": "5",
-      "parRequestUriLifespan": "60",
+      "clientOfflineSessionMaxLifespan": "0",
+      "clientSessionIdleTimeout": "0",
+      "clientOfflineSessionIdleTimeout": "0",
       "cibaInterval": "5",
-      "realmReusableOtpCode": "false"
+      "realmReusableOtpCode": "false",
+      "cibaExpiresIn": "120",
+      "oauth2DeviceCodeLifespan": "600",
+      "parRequestUriLifespan": "60",
+      "clientSessionMaxLifespan": "0",
+      "frontendUrl": "http://keycloak:8080",
+      "acr.loa.map": "{}"
     },
     "keycloakVersion": "22.0.1",
     "userManagedAccessAllowed": false,
