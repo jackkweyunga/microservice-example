@@ -11,11 +11,11 @@ The architecture used in the `MICROSERVICE ARCHTECTURE`
 
 ## API ACCESS, AUTHENTICATION AND AUTHORIZATION
 
-The above mentioned architecture calls for the use of a separate authentication service. In ukumbi, [KEYCLOAK](https://www.keycloak.org/) is being used for that purpose.
+The above mentioned architecture calls for the use of a separate authentication service. In this project, [KEYCLOAK](https://www.keycloak.org/) is being used for that purpose.
 
 Also [KRAKEND](https://www.krakend.io/) is being used as an API gateway.
 
-Together these two services complete the authentication and authorization architecture for ukumbi.
+Together these two services complete the authentication and authorization architecture for this project.
 
 [Read more about this](https://www.krakend.io/docs/authorization/keycloak/)
 

@@ -12,5 +12,4 @@ Make sure docker is installed in your machine.
 docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.1 start-dev
 ```
 
-2. Go to http://localhost:8080/admin to access the admin panel
-
+2. Go to <http://localhost:8080/admin> to access the admin panel
