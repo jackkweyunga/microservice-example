@@ -16,7 +16,7 @@ services:
 
   ms-service1:
     image: ghcr.io/jackkweyunga/drf_oidc_example:main
-    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     expose:   
       - 8000
     container_name: ms-service1

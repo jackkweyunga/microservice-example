@@ -12,7 +12,7 @@
           "method": "GET",
           "encoding": "json",
           "host": [
-            "http://service1:8000"
+            "http://ms-service1:8000"
           ]
         }
       ]
@@ -30,10 +30,11 @@
       "extra_config": {
           "auth/validator": {
               "alg": "RS256",
-              "jwk_url": "http://keycloak:8080/realms/ukumbi/protocol/openid-connect/certs",
-              "issuer": "http://127.0.0.1:8080/realms/ukumbi",
+              "jwk_url": "http://keycloak:8080/realms/the-realm/protocol/openid-connect/certs",
+              "issuer": "http://keycloak:8080/realms/the-realm",
               "operation_debug": true,
               "disable_jwk_security": true
+
           }
       },
       "backend": [
@@ -42,7 +43,7 @@
           "method": "GET",
           "encoding": "json",
           "host": [
-            "http://service1:8000"
+            "http://ms-service1:8000"
           ]
         }
       ]
